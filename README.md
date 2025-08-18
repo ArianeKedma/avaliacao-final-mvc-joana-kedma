@@ -1,4 +1,4 @@
-- Sistema de Gestão de Tarefas 
+# Sistema de Gestão de Tarefas 
 
 Um serviço desenvolvido em Java que tem como objetivo desenvolver um sistema de gestão de tarefas de forma simples, incluindo conceitos e regras aprendidos em aula.
 
