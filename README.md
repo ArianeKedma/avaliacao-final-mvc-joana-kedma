@@ -1,96 +1,51 @@
-- Sistema de Gestão de Tarefas 
+<h1 align="center"> Sistema de gestão de tarefas </h1>
+<p align="center"> Esta é a segunda parte da prova de Arquiterura de Sistemas e tem como proposta desenvolver um sistema de tarefas simples, com camadas bem definidas e aplicação dos padrões de projeto e arquitetura aprendidos nos Módulos 1 e 2. </p>
 
-Um serviço desenvolvido em Java que tem como objetivo desenvolver um sistema de gestão de tarefas de forma simples, incluindo conceitos e regras aprendidos em aula.
+# Índice
+- [Tecnologias Utilizadas](#tecnologias)
+- [Qual arquitetura foi escolhida](#arquitetura)
+- [Quais padrões foram aplicados e porquê](#padrões)
+- [Como rodar o Sistema](#tutorial)
+- [Alunas](#alunas) 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Tecnologias
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" width="60" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg"  width="60"/>
+          
 
-📒 Sumário
+# Arquitetura
+A arquitetura escolhida foi **MVC (Model–View–Controller)**:
+- **Model (`src/model/`)** → contém as classes de domínio, como `Tarefa` e `Prioridade`, que representam os dados e regras de negócio.
+- **Controller (`src/controller/`)** → contém a lógica de controle, como `TarefaController`, responsável por gerenciar as operações sobre as tarefas.
+- **View** → implementada via console no `Main.java`, permitindo interação do usuário.
 
-🚩 Equipe
+# Padrões
+- **Factory (`src/patterns/creation/TarefaFactory`)**
+  - Usado para **centralizar e padronizar a criação de tarefas**, facilitando a manutenção e evitando duplicação de código.
 
-⚙ Tecnologias e Ferramentas
+- **Logger (`src/patterns/structural/TarefaLogger`)**
+  - Um padrão **estrutural** para registrar ações executadas no sistema (ex.: criação, listagem ou exclusão de tarefas), garantindo rastreabilidade.
 
-📑 Funcionalidades
+- **Strategy (`src/patterns/behavioral/OrdenacaoPorPrioridade`)**
+  - Um padrão **comportamental** usado para **ordenar tarefas por prioridade** de forma flexível, permitindo trocar ou estender critérios de ordenação no futuro.
 
-💾 Como executar o projeto
+# Tutorial
+1. **Pré-requisitos**
+   - Java 17+ instalado.
+   - A IDE utilizada por nós foi a IntelliJ IDEA, porém, você pode optar por outra de sua preferência desde que ela seja compatível com o Java.
 
-📱 Pré-requisitos
+2. **Execução**
+   - Abra o projeto no IntelliJ.
+   - Compile o código (`Build > Build Project`).
+   - Rode a classe `Main.java` localizada em `src/`.
 
-🧩 Links Importantes
+3. **Exemplo de uso (via console)**
+   - O usuário será guiado por menus no console.
+   - Exemplos de interações:
+     - Criar uma nova tarefa definindo título, descrição e prioridade.
+     - Listar tarefas ordenadas por prioridade.
+     - Excluir tarefas já concluídas.
 
-🪄 Projeto
+# Alunas
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/141370991?v=4" width=115><br><sub>Joana Pixel</sub>](https://github.com/JoanaPixel) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/173846259?v=4" width=115><br><sub>Ariane Kedma</sub>](https://github.com/ArianeKedma) |
+| :---: | :---: |
 
-⭐ Professor
-
-🚀 Contatos
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-🚩 Equipe
-
-Joana Jensen Schifter
-
-Ariane Kedma Silva
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-⚙ Tecnologias e Ferramentas
-
-Linguagem Java: uma linguagem extremamente utilizada para desenvolvimento de diversas aplicações, podendo ser utilizada para implementações simples e complexas.
-GitHub: plataforma de publicação e compartilhamento de códigos, utilizada para compartilhar a aplicação com o professor.
-Notion: consultas no aplicativo Notion com o material disponibilizado pelo professor para consultas e dúvidas.
-VSCode: IDEA utilizada para o desenvolvimento da aplicação, com extensões que suportem a linguagem Java.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-📑 Funcionalidades
-
-💾 Como executar o projeto
-
-Siga estas instruções para acessar a aplicação em sua máquina local.
-
-📱 Pré-requisitos
-
-Visual Studio Code: Para visualização do código, é ideal que você possua a IDEA instalada em sua máquina. 
-Extension Pack for Java: É necessário que você possua a extensão Extension Pack for Java para conseguir total proveito do código sem complicações da IDEA.
-Git: Possua uma conta GitHub para acessar e clonar o repositório.
-Navegador: Independente de qual seja sua preferência, é necessário que possua um navegador que possa acessar o projeto para download.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-🧩 Links Importantes
-
-Repositório: https://github.com/ArianeKedma/avaliacao-final-mvc-kedma-joana/blob/main/README.md
-
-Link para o acessar o material para consulta: https://spotty-nutria-708.notion.site/Arquitetura-de-Sistemas-1eb3bb4536268006a807c696b3aba688
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-🪄 Projeto
-
-Projeto desenvolvido para a prova de avaliação da unidade curricular de Arquitetura de Sistemas.
-
-Curso: Aprendizagem Industrial em Desenvolvimento de Sistemas.
-Ano: 2025
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-⭐ Professor
-
-Matheus Quost
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-🚀 Contatos
-
-Ariane Kedma Silva:
-
-Github: https://github.com/ArianeKedma
-
-Gmail: ariane_k_silva@estudante.sesisenai.org.br
-
-Joana Jensen Schifter:
-
-Github: https://github.com/JoanaPixel
-
-Gmail: joana_schifter@estudante.sesisenai.org.br
